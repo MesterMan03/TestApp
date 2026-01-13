@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6F328A232F16C6AF00A4C02F /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F328A222F16C6AF00A4C02F /* WidgetKit.framework */; };
+		6F328A252F16C6AF00A4C02F /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F328A242F16C6AF00A4C02F /* SwiftUI.framework */; };
+		6F328A362F16C6B100A4C02F /* ScanWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6F328A202F16C6AF00A4C02F /* ScanWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		6F3289E82F165ED900A4C02F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +27,76 @@
 			remoteGlobalIDString = 6F3289D92F165ED800A4C02F;
 			remoteInfo = Test;
 		};
+		6F328A342F16C6B100A4C02F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F3289D22F165ED800A4C02F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F328A1F2F16C6AF00A4C02F;
+			remoteInfo = ScanWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F328A3B2F16C6B100A4C02F /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6F328A362F16C6B100A4C02F /* ScanWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6F3289DA2F165ED800A4C02F /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3289E72F165ED900A4C02F /* TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F3289F12F165ED900A4C02F /* TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F328A202F16C6AF00A4C02F /* ScanWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScanWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F328A222F16C6AF00A4C02F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6F328A242F16C6AF00A4C02F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6F328A1B2F16C33D00A4C02F /* Exceptions for "Test" folder in "Test" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6F3289D92F165ED800A4C02F /* Test */;
+		};
+		6F328A3A2F16C6B100A4C02F /* Exceptions for "ScanWidget" folder in "ScanWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6F328A1F2F16C6AF00A4C02F /* ScanWidgetExtension */;
+		};
+		6F328A3E2F16C91C00A4C02F /* Exceptions for "ScanWidget" folder in "Test" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ScanWidgetLiveActivity.swift,
+			);
+			target = 6F3289D92F165ED800A4C02F /* Test */;
+		};
+		6F328A402F16CBC200A4C02F /* Exceptions for "Test" folder in "ScanWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ScanIntent.swift,
+			);
+			target = 6F328A1F2F16C6AF00A4C02F /* ScanWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		6F3289DC2F165ED800A4C02F /* Test */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6F328A1B2F16C33D00A4C02F /* Exceptions for "Test" folder in "Test" target */,
+				6F328A402F16CBC200A4C02F /* Exceptions for "Test" folder in "ScanWidgetExtension" target */,
+			);
 			path = Test;
 			sourceTree = "<group>";
 		};
@@ -43,6 +108,15 @@
 		6F3289F42F165ED900A4C02F /* TestUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = TestUITests;
+			sourceTree = "<group>";
+		};
+		6F328A262F16C6AF00A4C02F /* ScanWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6F328A3E2F16C91C00A4C02F /* Exceptions for "ScanWidget" folder in "Test" target */,
+				6F328A3A2F16C6B100A4C02F /* Exceptions for "ScanWidget" folder in "ScanWidgetExtension" target */,
+			);
+			path = ScanWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +143,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6F328A1D2F16C6AF00A4C02F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F328A252F16C6AF00A4C02F /* SwiftUI.framework in Frameworks */,
+				6F328A232F16C6AF00A4C02F /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +161,8 @@
 				6F3289DC2F165ED800A4C02F /* Test */,
 				6F3289EA2F165ED900A4C02F /* TestTests */,
 				6F3289F42F165ED900A4C02F /* TestUITests */,
+				6F328A262F16C6AF00A4C02F /* ScanWidget */,
+				6F328A212F16C6AF00A4C02F /* Frameworks */,
 				6F3289DB2F165ED800A4C02F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +173,18 @@
 				6F3289DA2F165ED800A4C02F /* Test.app */,
 				6F3289E72F165ED900A4C02F /* TestTests.xctest */,
 				6F3289F12F165ED900A4C02F /* TestUITests.xctest */,
+				6F328A202F16C6AF00A4C02F /* ScanWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6F328A212F16C6AF00A4C02F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F328A222F16C6AF00A4C02F /* WidgetKit.framework */,
+				6F328A242F16C6AF00A4C02F /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +197,12 @@
 				6F3289D62F165ED800A4C02F /* Sources */,
 				6F3289D72F165ED800A4C02F /* Frameworks */,
 				6F3289D82F165ED800A4C02F /* Resources */,
+				6F328A3B2F16C6B100A4C02F /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6F328A352F16C6B100A4C02F /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				6F3289DC2F165ED800A4C02F /* Test */,
@@ -163,6 +260,28 @@
 			productReference = 6F3289F12F165ED900A4C02F /* TestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		6F328A1F2F16C6AF00A4C02F /* ScanWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F328A372F16C6B100A4C02F /* Build configuration list for PBXNativeTarget "ScanWidgetExtension" */;
+			buildPhases = (
+				6F328A1C2F16C6AF00A4C02F /* Sources */,
+				6F328A1D2F16C6AF00A4C02F /* Frameworks */,
+				6F328A1E2F16C6AF00A4C02F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6F328A262F16C6AF00A4C02F /* ScanWidget */,
+			);
+			name = ScanWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = ScanWidgetExtension;
+			productReference = 6F328A202F16C6AF00A4C02F /* ScanWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +303,9 @@
 						CreatedOnToolsVersion = 16.3;
 						TestTargetID = 6F3289D92F165ED800A4C02F;
 					};
+					6F328A1F2F16C6AF00A4C02F = {
+						CreatedOnToolsVersion = 16.3;
+					};
 				};
 			};
 			buildConfigurationList = 6F3289D52F165ED800A4C02F /* Build configuration list for PBXProject "Test" */;
@@ -203,6 +325,7 @@
 				6F3289D92F165ED800A4C02F /* Test */,
 				6F3289E62F165ED900A4C02F /* TestTests */,
 				6F3289F02F165ED900A4C02F /* TestUITests */,
+				6F328A1F2F16C6AF00A4C02F /* ScanWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +346,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6F3289EF2F165ED900A4C02F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F328A1E2F16C6AF00A4C02F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +383,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6F328A1C2F16C6AF00A4C02F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +402,11 @@
 			isa = PBXTargetDependency;
 			target = 6F3289D92F165ED800A4C02F /* Test */;
 			targetProxy = 6F3289F22F165ED900A4C02F /* PBXContainerItemProxy */;
+		};
+		6F328A352F16C6B100A4C02F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F328A1F2F16C6AF00A4C02F /* ScanWidgetExtension */;
+			targetProxy = 6F328A342F16C6B100A4C02F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -397,6 +539,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Test/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +569,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Test/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivitiesFrequentUpdates = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -510,6 +658,58 @@
 			};
 			name = Release;
 		};
+		6F328A382F16C6B100A4C02F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScanWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScanWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.mester.Test.ScanWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F328A392F16C6B100A4C02F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScanWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScanWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = info.mester.Test.ScanWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -545,6 +745,15 @@
 			buildConfigurations = (
 				6F328A022F165ED900A4C02F /* Debug */,
 				6F328A032F165ED900A4C02F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F328A372F16C6B100A4C02F /* Build configuration list for PBXNativeTarget "ScanWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F328A382F16C6B100A4C02F /* Debug */,
+				6F328A392F16C6B100A4C02F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
