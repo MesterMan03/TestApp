@@ -21,8 +21,7 @@ struct ContentView: View {
                 Task {
                     let intent = ScanIntent()
                     do {
-                        let outcome = try await intent.perform()
-                        
+                        _ = try await intent.perform()
                         result = "Success!"
                     } catch {
                         result = "Error: \(error.localizedDescription)"

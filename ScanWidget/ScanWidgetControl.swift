@@ -29,7 +29,7 @@ struct ScanControlProvider: AppIntentControlValueProvider {
         return false
     }
     
-    func previewValue(configuration: ScanControlConfiguration) -> Value {
+    func previewValue(configuration: ScanControlConfiguration) -> Bool {
         return false
     }
 }

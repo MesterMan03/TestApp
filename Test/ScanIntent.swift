@@ -16,7 +16,8 @@ struct ScanIntent: AppIntent {
     @MainActor
     func perform() async throws -> some IntentResult {
         guard ActivityAuthorizationInfo().areActivitiesEnabled else {
-            throw $activityError.needsValueError("Live Activities are not enabled")
+            debugPrint("Live Activities are not enabled")
+            return .result()
         }
         
         do {
@@ -49,7 +50,4 @@ struct ScanIntent: AppIntent {
             return .result()
         }
     }
-    
-    @Parameter(title: "Activity Error")
-    var activityError: String?
 }
